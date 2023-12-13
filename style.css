@@ -39,8 +39,23 @@ body{
     font-size: 4rem;
     text-transform: uppercase;
     font-family: var(--font1);
-    color: #d4d1d1;
+    color: #e8e8e8dd;
     cursor: pointer;
+}
+
+.btn-up{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    padding: .8rem 1rem;
+    background-color: #1c0e0f;
+    border-radius: 50%;
+    color: #e8e8e8dd;
+    box-shadow: 3px 2px 10px 5px #31313181;
+}
+
+.header{
+    position: relative;
 }
 
 div.div-header{
@@ -50,6 +65,20 @@ div.div-header{
 header nav ul{
     display: flex;
     gap: .5rem;
+}
+
+.btn-menu{
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #d4d1d1;
+    padding: 15px;
+    font-size: 1.25rem;
+    cursor: pointer;
+
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
 }
 
 header a{
@@ -240,4 +269,77 @@ footer p{
     letter-spacing: 1px;
     font-size: .9rem;
     text-transform: uppercase;
+}
+
+
+
+@media (max-width: 1000px){
+    div.images{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px){
+    .header{
+        flex-direction: column;
+    }   
+
+    nav{
+
+        width: 100%;
+    }
+
+    .header nav ul{
+        display: none;
+    }
+
+    .header nav ul.ativo{
+        display: block;
+    }
+
+    header a{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-menu{
+        display: initial;
+    }
+}
+
+@media (max-width: 800px){
+    div.sec2{
+        display: none;
+    }
+
+    .main{
+       display: block;
+    }
+
+    div.sec1{
+        text-align: center;
+    }
+}
+
+@media (max-width: 660px){
+    div.images{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px){
+    .main .sec1 span a{
+        display: none;
+    }
+}
+
+@media (max-width: 430px){
+    .span-h1{
+        width: 100%;
+    }
+
+    footer p{
+        font-size: .7rem;
+    }
 }
