@@ -346,6 +346,7 @@ footer p{
     .main .sec1 span a{
         display: none;
     }
+
 }
 
 @media (max-width: 430px){
@@ -404,7 +405,7 @@ footer p{
     padding-bottom: 1rem;
 }
 
-#modal > div > div:last-child{
+#modal > div > div.last{
     border: none;
 }
 
@@ -435,4 +436,11 @@ footer p{
     background-color: #1c0e0f;
     border-radius: 50%;
     cursor: pointer;
+}
+
+@media (max-width: 500px){
+    #modal > div{
+        width: 300px;
+        border-radius: 30px 0;
+    }
 }
